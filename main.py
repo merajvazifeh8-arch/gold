@@ -18,7 +18,8 @@ bot = Bot(BOT_TOKEN)
 
 ATR_MULTIPLIER_SL = 1.0
 ATR_MULTIPLIER_TP = 2.0
-CHECK_INTERVAL = 15 * 60  # 15 دقیقه
+CHECK_INTERVAL = 5 * 60  # 5 دقیقه
+
 
 async def gold_signal():
     gold = yf.Ticker("GC=F")
@@ -76,3 +77,4 @@ async def main_loop():
 # اجرای برنامه در کولب
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main_loop())
+
